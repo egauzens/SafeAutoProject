@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -25,11 +25,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Pages\Input\Input.txt" />
+    <None Remove="Data\Input\Input.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Pages\Input\Input.txt" />
+    <Content Include="Data\Input\Input.txt" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

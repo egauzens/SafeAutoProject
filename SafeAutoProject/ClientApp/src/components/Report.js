@@ -36,7 +36,7 @@ export class Report extends Component {
     render() {
         let content;
         if (this.state.error !== "") {
-            content = <p><em>{this.state.error}</em></p>
+            content = <p className={ "text-danger" }><em>{this.state.error}</em></p>
         }
         else {
             content = this.state.loading

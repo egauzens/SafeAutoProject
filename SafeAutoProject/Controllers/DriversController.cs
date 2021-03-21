@@ -9,7 +9,7 @@ namespace SafeAutoProject.Controllers
     [Route("[controller]")]
     public class DriversController : ControllerBase
     {
-        private const string INPUT_FILE_LOCATION = "./Pages/Input/Input.txt";
+        private const string INPUT_FILE_LOCATION = "./Data/Input/Input.txt";
 
         private readonly Dictionary<string, Driver> drivers;
         private string error;

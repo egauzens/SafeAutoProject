@@ -22,9 +22,17 @@ namespace SafeAutoProject
 
         public double MilesDriven { get; private set; }
 
-        public double Mph { get; private set; }
-
         public double TripLengthInHours { get; private set; }
+
+        public bool ShouldCount
+        {
+            get
+            {
+                var mph = MilesDriven / TripLengthInHours;
+                return mph > 5 && mph < 100;
+            }
+        }
+            
 
         private void SetTripLengthInHours()
         {

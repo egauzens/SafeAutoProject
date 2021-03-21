@@ -14,11 +14,18 @@ namespace SafeAutoProject
         public ArrayList Trips { get; }
         public string Name { get; private set; }
 
-        public void AddTrip(Trip trip)
+        public bool AddTrip(Trip trip)
         {
-            Trips.Add(trip);
-            TotalMiles += trip.MilesDriven;
-            TotalHours += trip.TripLengthInHours;
+            if (trip.ShouldCount)
+            {
+                Trips.Add(trip);
+                TotalMiles += trip.MilesDriven;
+                TotalHours += trip.TripLengthInHours;
+
+                return true;
+            }
+
+            return false;
         }
 
         public double TotalMiles
